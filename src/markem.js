@@ -6,7 +6,7 @@ import Showdown from 'showdown';
 import yaml from 'yaml';
 
 if (argv.length < 3) {
-  stderr.write('Missing path to directory!');
+  stderr.write('Missing path to directory!\n');
   exit(1);
 }
 
@@ -14,7 +14,7 @@ const rootDirPath = // Convert the path to an absolute path if necessary
   isAbsolute(argv[2]) ? argv[2] : join(cwd(), argv[2]);
 
 if (!existsSync(rootDirPath)) {
-  stderr.write(`Directory doesn't exist: ${rootDirPath}`);
+  stderr.write(`Directory doesn't exist: ${rootDirPath}\n`);
   exit(1);
 }
 
